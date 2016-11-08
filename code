@@ -1,2 +1,104 @@
 # simple-edu-program
 +, -, *, / simple educational program made with C#
+
+using System;
+
+namespace helloworld
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+		start:
+			Random NumberGen = new Random();
+			int switchindex = NumberGen.Next(1, 5);
+
+			switch (switchindex)
+			 {
+				case 1:
+					int num01 = NumberGen.Next(1, 21);
+					int num02 = NumberGen.Next(1, 21);
+				start2:
+					Console.Write(num01 + " + " + num02 + " = ");
+					int num03;
+					num03 = Convert.ToInt32(Console.ReadLine());
+					if (num03 == num01 + num02)
+					{
+						Console.Clear();
+						goto start;
+					}
+					else {
+						Console.WriteLine("wrong answer, try again.");
+						goto start2;
+					}
+				break;
+				case 2:
+					int num04 = NumberGen.Next(1, 21);
+					int num05 = NumberGen.Next(1, 21);
+				start3:
+					Console.Write(num04 + " - " + num05 + " = ");
+					int num06;
+					num06 = Convert.ToInt32(Console.ReadLine());
+					if (num06 == num04 - num05)
+					{
+						Console.Clear();
+						goto start;
+					}
+					else {
+						Console.WriteLine("wrong answer, try again.");
+						goto start3;
+					}
+				break;
+				case 3:
+					int num07 = NumberGen.Next(1, 11);
+					int num08 = NumberGen.Next(1, 11);
+				start4:
+					Console.Write(num07 + " * " + num08 + " = ");
+					int num09;
+					num09 = Convert.ToInt32(Console.ReadLine());
+					if (num09 == num07 * num08)
+					{
+						Console.Clear();
+						goto start;
+					}
+					else {
+						Console.WriteLine("wrong answer, try again.");
+						goto start4;
+					}
+				break;
+				case 4:
+				start6:
+					decimal num10 = NumberGen.Next(1, 11);
+					decimal num11 = NumberGen.Next(1, 11);
+				start5:
+
+					if (num10 > num11)
+					{
+						Console.Write(num10 + " / " + num11 + " = ");
+						decimal num12;
+						num12 = Convert.ToDecimal(Console.ReadLine());
+						num12 = Math.Round(num12, 2);
+						decimal num13;
+						num13 = num10 / num11;
+						num13 = Math.Round(num13, 2);
+
+						if (num12 == num13)
+						{
+							Console.Clear();
+							goto start;
+						}
+						else {
+							Console.WriteLine("wrong answer, try again.");
+							goto start5;
+						}
+					}
+					else {
+						goto start6;
+					}
+				break;
+			 }
+		}
+
+	}
+}
+
