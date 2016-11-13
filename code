@@ -21,6 +21,8 @@ namespace helloworld
 					num03 = Convert.ToInt32(Console.ReadLine());
 					if (num03 == num01 + num02)
 					{
+				                Console.WriteLine("Correct, press any button to continue");
+						Console.ReadKey();
 						Console.Clear();
 						goto start;
 					}
@@ -38,6 +40,8 @@ namespace helloworld
 					num06 = Convert.ToInt32(Console.ReadLine());
 					if (num06 == num04 - num05)
 					{
+					        Console.WriteLine("Correct, press any button to continue");
+						Console.ReadKey();
 						Console.Clear();
 						goto start;
 					}
@@ -55,6 +59,8 @@ namespace helloworld
 					num09 = Convert.ToInt32(Console.ReadLine());
 					if (num09 == num07 * num08)
 					{
+					        Console.WriteLine("Correct, press any button to continue");
+						Console.ReadKey();
 						Console.Clear();
 						goto start;
 					}
@@ -81,6 +87,8 @@ namespace helloworld
 
 						if (num12 == num13)
 						{
+						        Console.WriteLine("Correct, press any button to continue");
+						        Console.ReadKey();
 							Console.Clear();
 							goto start;
 						}
