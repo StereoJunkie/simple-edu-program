@@ -1,6 +1,3 @@
-# simple-edu-program
-+, -, *, / simple educational program made with C#
-
 using System;
 
 namespace helloworld
